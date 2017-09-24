@@ -1,0 +1,13 @@
+<div class="col-sm-12">
+  <carousel class="text-center">
+    <slide *ngFor="let image of homeImageList">
+      <a class="" routerLink="/videos/{{image.slug}}" routerLinkActive="active" (click)="preventNormal($event, image)">
+        <img class="img-main-carousel" [src]="image.image" alt="First slide">
+      </a>
+      <div class="carousel-caption">
+        <h3>{{image.name}}</h3>
+        <p><a class="btn btn-default" href="/videos/{{ image.slug }}">View</a></p>
+      </div>
+    </slide>
+  </carousel>
+</div>
